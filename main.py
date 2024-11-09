@@ -3,6 +3,8 @@ import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
 
+from pyvis.network import Network
+
 from data_utils import generate_filtered_data
 
 CULLED_FILE_PATH = "filtered_etymology_db.csv.gz"
@@ -31,6 +33,18 @@ def plot_word_graph(df, word):
     # Show the plot
     plt.title(f"Graph of '{word}' and Related Terms")
     plt.show()
+
+def plot_word_graph_pyvis(df, word):
+    net = Network(notebook=True, height="750px", width="100%", bgcolor="#222222", font_color="white")
+    sub_df = df[(df['term'] == word) | (df['related_term'] == word)]
+    for _, row in sub_df.iterrows():
+        # Add nodes and edges
+        net.add_node(row['term'], label=row['term'])
+        net.add_node(row['related_term'], label=row['related_term'])
+        net.add_edge(row['term'], row['related_term'], title=row['reltype'])
+
+    net.show_buttons()
+    net.show("word_graph.html")
 
 def search_word(df):
     while True:
@@ -62,7 +76,8 @@ def main():
     # Load the filtered data and proceed with main functionality
     df = pd.read_csv(CULLED_FILE_PATH, compression="gzip")
     #search_word(df)
-    plot_word_graph(df, "donation")
+    #plot_word_graph(df, "donation")
+    plot_word_graph_pyvis(df, "donate")
 
 
 # Only run main if this script is executed directly
