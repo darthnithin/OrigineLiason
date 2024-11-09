@@ -30,9 +30,10 @@ env.bak/
 *.log
 *.tmp
 
-# Data files (not excluding gzipped CSV)
+# Data files 
 *.csv
 *.tsv
+*.gz
 *.parquet
 *.db
 *.sqlite3
