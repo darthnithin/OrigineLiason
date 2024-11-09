@@ -17,7 +17,12 @@ def search_word(df):
 
         if not result.empty:
             print("Results found:")
-            print(result)
+            for (i, row) in result.iterrows():
+                print(i,": ", row)
+            selection = int(input("Select an index: ").strip())
+            print(selection)
+            selected_word = result.loc[selection]
+            print(selected_word)
         else:
             print(f"No results found for '{word}'. Please try another word.")
 
@@ -29,7 +34,7 @@ def main():
 
     # Load the filtered data and proceed with main functionality
     df = pd.read_csv(CULLED_FILE_PATH, compression="gzip")
-    print(df.head())
+    search_word(df)
 
 
 # Only run main if this script is executed directly
