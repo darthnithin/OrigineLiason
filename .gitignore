@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Environment and package files
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+*.env
+
+# VS Code settings
+.vscode/
+
+# MacOS files
+.DS_Store
+
+# IDE and editor settings
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Log and temporary files
+*.log
+*.tmp
+
+# Data files (not excluding gzipped CSV)
+*.csv
+*.tsv
+*.parquet
+*.db
+*.sqlite3
+
+# Project-specific files
+resources.md  # Exclude resources.md specifically
+
+# Python package files
+*.egg
+*.egg-info/
+dist/
+build/
+*.pyc
