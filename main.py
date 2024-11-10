@@ -35,16 +35,42 @@ def plot_word_graph(df, word):
     plt.show()
 
 def plot_word_graph_pyvis(df, word):
-    net = Network(notebook=True, height="750px", width="100%", bgcolor="#222222", font_color="white")
-    sub_df = df[(df['term'] == word) | (df['related_term'] == word)]
+    net = Network(notebook=False, height="750px", width="100%", bgcolor="#222222", font_color="white", select_menu=True, filter_menu=True)
+    searched = []
+    add_word(df, word, net, searched)
+    
+    net.show_buttons()
+    html_content = net.generate_html()
+    with open("word_graph.html", "w", encoding="utf-8") as f:
+        f.write(html_content)
+    #net.show("word_graph.html")
+    print("done")
+
+def add_word(df, word, net, searched_words):
+    sub_df = df[((df['term'] == word) | (df['related_term'] == word)) ]
     for _, row in sub_df.iterrows():
         # Add nodes and edges
-        net.add_node(row['term'], label=row['term'])
-        net.add_node(row['related_term'], label=row['related_term'])
-        net.add_edge(row['term'], row['related_term'], title=row['reltype'])
 
-    net.show_buttons()
-    net.show("word_graph.html")
+        if (net.num_nodes() < 100) and ((row['term'], row['related_term']) not in searched_words):
+            #print(row)
+            if pd.notna(row['related_term']):
+                # if term is not english and has an arrow leaving, color red
+                if (row['lang'] != "English") and (not ((str(row['reltype']).split('_')[1] == 'of') or (str(row['reltype'].split('_')[0] == "has")))):
+                    net.add_node(row['term'], label=row['term'], title=f"{row['lang']}\n{str(row['position'])}\n{str(row['group_tag'])}", color="red")
+                else:
+                    net.add_node(row['term'], label=row['term'], title=f"{row['lang']}\n{str(row['position'])}\n{str(row['group_tag'])}")
+                if (row['related_lang'] != "English") and (((str(row['reltype']).split('_')[1] == 'of') or (str(row['reltype'].split('_')[0] == "has")))):
+                    net.add_node(row['related_term'], label=row['related_term'], title=row['related_lang'], color = "red")
+                else:
+                    net.add_node(row['related_term'], label=row['related_term'], title=row['related_lang'])
+                if (str(row['reltype']).split('_')[1] == 'of') or (str(row['reltype'].split('_')[0] == "has")):
+                    net.add_edge(row['related_term'], row['term'], title=row['reltype'], arrows="to")
+                else:
+                    net.add_edge(row['term'], row['related_term'], title=row['reltype'], arrows="to")
+                searched_words.append((row['term'], row['related_term']))
+                add_word(df, row['term'], net, searched_words)
+    #print(net.num_nodes(), len(searched_words))
+
 
 def search_word(df):
     while True:
@@ -77,7 +103,7 @@ def main():
     df = pd.read_csv(CULLED_FILE_PATH, compression="gzip")
     #search_word(df)
     #plot_word_graph(df, "donation")
-    plot_word_graph_pyvis(df, "donate")
+    plot_word_graph_pyvis(df, "father")
 
 
 # Only run main if this script is executed directly
