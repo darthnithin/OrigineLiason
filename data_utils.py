@@ -10,7 +10,19 @@ def generate_filtered_data():
     for chunk in pd.read_csv(filepath, compression="gzip", chunksize=100_000):
         filtered_chunk = chunk[
             (chunk["lang"].isin(["French", "English"]))
-            | (chunk["related_lang"].isin(["French", "English", "Latin", "Ancient Greek", "Old French", "Medieval Latin", "Late Latin"]))
+            | (
+                chunk["related_lang"].isin(
+                    [
+                        "French",
+                        "English",
+                        "Latin",
+                        "Ancient Greek",
+                        "Old French",
+                        "Medieval Latin",
+                        "Late Latin",
+                    ]
+                )
+            )
         ]
         filtered_data.append(filtered_chunk)
 

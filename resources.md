@@ -7,3 +7,5 @@ https://github.com/droher/etymology-db
 python -m black ./ to factor
 
 python -m pycodestyle ./ to check
+
+https://plotly.com/python/v3/3d-network-graph/
