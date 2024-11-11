@@ -4,6 +4,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 from flask import Flask, render_template_string
+from flask_caching import Cache
 from pyvis.network import Network
 from collections import deque
 from io import BytesIO
@@ -11,6 +12,11 @@ from io import BytesIO
 from data_utils import generate_filtered_data
 
 app = Flask(__name__)
+app.config['CACHE_TYPE'] = 'filesystem'
+app.config['CACHE_DIR'] = 'cache'
+
+cache = Cache(app)
+
 
 CULLED_FILE_PATH = "filtered_etymology_db.csv.gz"
 if not os.path.exists(CULLED_FILE_PATH):
@@ -61,6 +67,7 @@ def plot_word_graph(df, word):
 
 
 @app.route('/words/<path:words>')
+@cache.cached(timeout=300, query_string=True) # 5 min
 def plot_word_graph_pyvis(words):
     #print(words)
     net = Network(
@@ -161,6 +168,11 @@ def add_word_bfs(word, net, searched_words, node_count, wordlist, nodes_per):
                     queue.append(related_term)
         searched_words.add(current_word)
 
+@app.route('/clear_cache')
+def clear_cache():
+    cache.clear()
+    print("Cleared Cache!")
+    return "Cache Cleared!"
 
 def add_word(df, word, net, searched_words):
     sub_df = df[((df["term"] == word) | (df["related_term"] == word))]

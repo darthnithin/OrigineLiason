@@ -5,3 +5,4 @@ networkx
 matplotlib
 pyvis
 flask
+Flask-Caching
