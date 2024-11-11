@@ -81,6 +81,7 @@ def plot_word_graph_pyvis(words):
     )
     searched = set()
     #add_word(df, word, net, searched)
+
     word_list = words.split('/')
     last_word_or_number = word_list[-1]
     if last_word_or_number.isdigit():
@@ -100,12 +101,14 @@ def plot_word_graph_pyvis(words):
     print("done")
 
 
+
     return render_template_string(html_content)
 
 def add_word_bfs(word, net, searched_words, node_count, wordlist, nodes_per):
     queue = deque([word])
     path = "/".join(wordlist)
     while queue and (net.num_nodes() < node_count):
+
         current_word = queue.popleft()
         if current_word in searched_words:
             continue
