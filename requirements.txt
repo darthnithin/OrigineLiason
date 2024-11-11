@@ -4,3 +4,6 @@ black
 networkx
 matplotlib
 pyvis
+dash
+plotly
+dash-cytoscape

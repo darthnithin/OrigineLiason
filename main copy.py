@@ -2,103 +2,12 @@ import os
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
-import pandas as pd
-import plotly.graph_objects as go
-import dash_cytoscape as cyto
-import dash
 
-
-from dash import dcc, html, Input, Output
 from pyvis.network import Network
 
 from data_utils import generate_filtered_data
 
 CULLED_FILE_PATH = "filtered_etymology_db.csv.gz"
-# Check if filtered file exists, generate if it doesn't
-if not os.path.exists(CULLED_FILE_PATH):
-    generate_filtered_data()
-
-# Load the filtered data and proceed with main functionality
-df = pd.read_csv(CULLED_FILE_PATH, compression="gzip")
-def create_cytoscape_elements(word, existing_elements=None):
-    elements = existing_elements or []
-    
-    # Filter rows where the term or related term matches the input word
-    sub_df = df[(df['term'] == word) | (df['related_term'] == word)]
-    
-    # Create nodes and edges for Cytoscape
-    for _, row in sub_df.iterrows():
-        # Add the term node if not already added
-        if not any(el.get('data', {}).get('id') == row['term'] for el in elements):
-            elements.append({'data': {'id': row['term'], 'label': row['term']}})
-        
-        # Add the related_term node if not already added
-        if not any(el.get('data', {}).get('id') == row['related_term'] for el in elements):
-            elements.append({'data': {'id': row['related_term'], 'label': row['related_term']}})
-        
-        # Add an edge with the relationship type as the label
-        elements.append({
-            'data': {
-                'source': row['term'],
-                'target': row['related_term'],
-                'label': row['reltype']
-            }
-        })
-    
-    return elements
-app = dash.Dash(__name__)
-app.layout = html.Div([
-    html.H1("Interactive Network Graph with Dash Cytoscape"),
-    dcc.Input(id='input-word', type='text', value='please', placeholder="Enter a word"),
-    html.Button('Update Graph', id='submit-button', n_clicks=0),
-    cyto.Cytoscape(
-        id='cytoscape-network',
-        elements=create_cytoscape_elements('please'),
-        layout={'name': 'cose'},  # 'cose' is a physics-based layout
-        style={'width': '100%', 'height': '600px', "background-color":'black'},
-        stylesheet=[
-            {
-                'selector': 'node',
-                'style': {
-                    'content': 'data(label)',
-                    'background-color': '#0074D9',
-                    'text-valign': 'center',
-                    'color': 'white',
-                    'font-size': 8,
-                    'width': 15,
-                    'height': 15
-                }
-            },
-            {
-                'selector': 'edge',
-                'style': {
-                    'width': 3,
-                    'line-color': '#888',
-                    'target-arrow-color': '#888',
-                    'target-arrow-shape': 'triangle',
-                    #'label': 'data(label)',  # Show the relationship type on the edge
-                    'font-size': 10
-                }
-            }
-        ]
-    ),
-    html.Div(id='output-click', style={"marginTop": 20})
-])
-
-@app.callback(
-    Output('cytoscape-network', 'elements'),
-    Output('output-click', 'children'),
-    Input('submit-button', 'n_clicks'),
-    Input('input-word', 'value'),
-    Input('cytoscape-network', 'tapNodeData')
-)
-def update_graph(n_clicks, word, tapNodeData):
-    if tapNodeData:
-        clicked_word = tapNodeData['id']
-        existing_elements = create_cytoscape_elements(clicked_word, existing_elements=app.layout['cytoscape-network'].elements)
-        return existing_elements, f'Expanded on: {clicked_word}'
-    else:  # If the update button was clicked
-        return create_cytoscape_elements(word), f'Showing graph for: {word}'
 
 
 def plot_word_graph(df, word):
@@ -247,12 +156,15 @@ def search_word(df):
 
 
 def main():
+    # Check if filtered file exists, generate if it doesn't
+    if not os.path.exists(CULLED_FILE_PATH):
+        generate_filtered_data()
 
+    # Load the filtered data and proceed with main functionality
+    df = pd.read_csv(CULLED_FILE_PATH, compression="gzip")
     # search_word(df)
     # plot_word_graph(df, "donation")
-    #plot_word_graph_pyvis(df, "text")
-    app.run_server(debug=True)
-
+    plot_word_graph_pyvis(df, "text")
 
 
 # Only run main if this script is executed directly
