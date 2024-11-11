@@ -65,7 +65,9 @@ def plot_word_graph_pyvis(df, word):
     )
     searched = set()
     #add_word(df, word, net, searched)
-    add_word_bfs(df, word, net, searched)
+    add_word_bfs(df, word, net, searched, 75)
+    add_word_bfs(df, "texto", net, searched, 140)
+
 
     net.show_buttons()
     html_content = net.generate_html()
@@ -74,11 +76,11 @@ def plot_word_graph_pyvis(df, word):
     # net.show("word_graph.html")
     print("done")
 
-def add_word_bfs(df, word, net, searched_words):
+def add_word_bfs(df, word, net, searched_words, node_count):
     queue = deque([word])
     
 
-    while queue and net.num_nodes() < 125:
+    while queue and net.num_nodes() < node_count:
         current_word = queue.popleft()
         if current_word in searched_words:
             continue
