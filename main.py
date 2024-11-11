@@ -3,13 +3,20 @@ import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
 
+from flask import Flask, render_template_string
 from pyvis.network import Network
 from collections import deque
+from io import BytesIO
 
 from data_utils import generate_filtered_data
 
-CULLED_FILE_PATH = "filtered_etymology_db.csv.gz"
+app = Flask(__name__)
 
+CULLED_FILE_PATH = "filtered_etymology_db.csv.gz"
+if not os.path.exists(CULLED_FILE_PATH):
+    generate_filtered_data()
+
+df = pd.read_csv(CULLED_FILE_PATH, compression="gzip")
 IMPORTANT_LANGUAGE_LIST = [
                         "French",
                         "Latin",
@@ -52,8 +59,8 @@ def plot_word_graph(df, word):
     plt.title(f"Graph of '{word}' and Related Terms")
     plt.show()
 
-
-def plot_word_graph_pyvis(df, word):
+@app.route('/<word>')
+def plot_word_graph_pyvis(word):
     net = Network(
         notebook=False,
         height="750px",
@@ -65,16 +72,21 @@ def plot_word_graph_pyvis(df, word):
     )
     searched = set()
     #add_word(df, word, net, searched)
-    add_word_bfs(df, word, net, searched)
+    add_word_bfs(word, net, searched)
 
     net.show_buttons()
     html_content = net.generate_html()
-    with open("word_graph.html", "w", encoding="utf-8") as f:
-        f.write(html_content)
-    # net.show("word_graph.html")
+    html_content = html_content.replace('href="lib/', 'href="/static/lib/')
+    html_content = html_content.replace('src="lib/', 'src="/static/lib/')
+
+    #with open(f"./words/{word}word_graph.html", "w", encoding="utf-8") as f:
+    #    f.write(html_content)
     print("done")
 
-def add_word_bfs(df, word, net, searched_words):
+
+    return render_template_string(html_content)
+
+def add_word_bfs(word, net, searched_words):
     queue = deque([word])
     
 
@@ -229,18 +241,7 @@ def search_word(df):
             print(f"No results found for '{word}'. Please try another word.")
 
 
-def main():
-    # Check if filtered file exists, generate if it doesn't
-    if not os.path.exists(CULLED_FILE_PATH):
-        generate_filtered_data()
-
-    # Load the filtered data and proceed with main functionality
-    df = pd.read_csv(CULLED_FILE_PATH, compression="gzip")
-    # search_word(df)
-    # plot_word_graph(df, "donation")
-    plot_word_graph_pyvis(df, "text")
-
 
 # Only run main if this script is executed directly
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)

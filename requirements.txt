@@ -4,3 +4,4 @@ black
 networkx
 matplotlib
 pyvis
+flask
