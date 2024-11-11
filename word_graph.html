@@ -44,6 +44,75 @@
              }
 
              
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 750px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
 
              
              #config {
@@ -73,205 +142,255 @@
                             >
                                 <option selected>Select a Node by ID</option>
                                 
-                                    <option value="father">father</option>
+                                    <option value="e-text">e-text</option>
                                 
-                                    <option value="*peh₂-">*peh₂-</option>
+                                    <option value="text">text</option>
                                 
-                                    <option value="fader">fader</option>
+                                    <option value="subtext">subtext</option>
                                 
-                                    <option value="fæder">fæder</option>
+                                    <option value="nan">nan</option>
                                 
-                                    <option value="*fader">*fader</option>
+                                    <option value="*tetḱ-">*tetḱ-</option>
                                 
-                                    <option value="*fadēr">*fadēr</option>
+                                    <option value="texte">texte</option>
                                 
-                                    <option value="*ph₂tḗr">*ph₂tḗr</option>
+                                    <option value="textus">textus</option>
                                 
-                                    <option value="ayr">ayr</option>
+                                    <option value="texō">texō</option>
                                 
-                                    <option value="faeder">faeder</option>
+                                    <option value="texture">texture</option>
                                 
-                                    <option value="padre">padre</option>
+                                    <option value="hypertext">hypertext</option>
                                 
-                                    <option value="pater">pater</option>
+                                    <option value="Teletext">Teletext</option>
                                 
-                                    <option value="père">père</option>
+                                    <option value="sext">sext</option>
                                 
-                                    <option value="grandfather">grandfather</option>
+                                    <option value="textbook">textbook</option>
                                 
-                                    <option value="grandfadre">grandfadre</option>
+                                    <option value="ciphertext">ciphertext</option>
                                 
-                                    <option value="graundfadir">graundfadir</option>
+                                    <option value="texta">texta</option>
                                 
-                                    <option value="graunfadir">graunfadir</option>
+                                    <option value="textbase">textbase</option>
                                 
-                                    <option value="grauntfader">grauntfader</option>
+                                    <option value="texting">texting</option>
                                 
-                                    <option value="graunt">graunt</option>
+                                    <option value="tejer">tejer</option>
                                 
-                                    <option value="grandpere">grandpere</option>
+                                    <option value="textspeak">textspeak</option>
                                 
-                                    <option value="grant pere">grant pere</option>
+                                    <option value="cleartext">cleartext</option>
                                 
-                                    <option value="grand-père">grand-père</option>
+                                    <option value="textome">textome</option>
                                 
-                                    <option value="grand">grand</option>
+                                    <option value="textphone">textphone</option>
                                 
-                                    <option value="eldfather">eldfather</option>
+                                    <option value="textonym">textonym</option>
                                 
-                                    <option value="elderfather">elderfather</option>
+                                    <option value="prooftext">prooftext</option>
                                 
-                                    <option value="grandfather clause">grandfather clause</option>
+                                    <option value="textmode">textmode</option>
                                 
-                                    <option value="clause">clause</option>
+                                    <option value="cybertext">cybertext</option>
                                 
-                                    <option value="gaffer">gaffer</option>
+                                    <option value="videotex">videotex</option>
                                 
-                                    <option value="gaff">gaff</option>
+                                    <option value="textese">textese</option>
                                 
-                                    <option value="-er">-er</option>
+                                    <option value="texter">texter</option>
                                 
-                                    <option value="gaff cloth">gaff cloth</option>
+                                    <option value="urtext">urtext</option>
                                 
-                                    <option value="gaff flap">gaff flap</option>
+                                    <option value="textless">textless</option>
                                 
-                                    <option value="godfather">godfather</option>
+                                    <option value="surtext">surtext</option>
                                 
-                                    <option value="compère">compère</option>
+                                    <option value="textlike">textlike</option>
                                 
-                                    <option value="Gevatter">Gevatter</option>
+                                    <option value="テキスト">テキスト</option>
                                 
-                                    <option value="gaffe">gaffe</option>
+                                    <option value="paratext">paratext</option>
                                 
-                                    <option value="gaffer tape">gaffer tape</option>
+                                    <option value="teacsa">teacsa</option>
                                 
-                                    <option value="tape">tape</option>
+                                    <option value="detext">detext</option>
                                 
-                                    <option value="gafa">gafa</option>
+                                    <option value="teletex">teletex</option>
                                 
-                                    <option value="gaffer grip">gaffer grip</option>
+                                    <option value="scrolltext">scrolltext</option>
                                 
-                                    <option value="grip">grip</option>
+                                    <option value="tecer">tecer</option>
                                 
-                                    <option value="great-grandfather">great-grandfather</option>
+                                    <option value="textaholic">textaholic</option>
                                 
-                                    <option value="great-">great-</option>
+                                    <option value="intexticated">intexticated</option>
                                 
-                                    <option value="great-grand">great-grand</option>
+                                    <option value="textbased">textbased</option>
                                 
-                                    <option value="great">great</option>
+                                    <option value="teks">teks</option>
                                 
-                                    <option value="great-granddaughter">great-granddaughter</option>
+                                    <option value="textblock">textblock</option>
                                 
-                                    <option value="great-grandmother">great-grandmother</option>
+                                    <option value="texton">texton</option>
                                 
-                                    <option value="great-grandson">great-grandson</option>
+                                    <option value="nontext">nontext</option>
                                 
-                                    <option value="great-grandfather-in-law">great-grandfather-in-law</option>
+                                    <option value="wikitext">wikitext</option>
                                 
-                                    <option value="in-law">in-law</option>
+                                    <option value="worktext">worktext</option>
                                 
-                                    <option value="grandparent">grandparent</option>
+                                    <option value="intertext">intertext</option>
                                 
-                                    <option value="parent">parent</option>
+                                    <option value="intext">intext</option>
                                 
-                                    <option value="grand-parent">grand-parent</option>
+                                    <option value="textman">textman</option>
                                 
-                                    <option value="great-grandparent">great-grandparent</option>
+                                    <option value="textboard">textboard</option>
                                 
-                                    <option value="great-grandparenthood">great-grandparenthood</option>
+                                    <option value="martext">martext</option>
                                 
-                                    <option value="hood">hood</option>
+                                    <option value="textworthy">textworthy</option>
                                 
-                                    <option value="grandparental">grandparental</option>
+                                    <option value="textshop">textshop</option>
                                 
-                                    <option value="al">al</option>
+                                    <option value="textism">textism</option>
                                 
-                                    <option value="grandparenthood">grandparenthood</option>
+                                    <option value="peritext">peritext</option>
                                 
-                                    <option value="co-grandparent">co-grandparent</option>
+                                    <option value="metatext">metatext</option>
                                 
-                                    <option value="co">co</option>
+                                    <option value="téacs">téacs</option>
                                 
-                                    <option value="grandparenting">grandparenting</option>
+                                    <option value="songtext">songtext</option>
                                 
-                                    <option value="ing">ing</option>
+                                    <option value="playtext">playtext</option>
                                 
-                                    <option value="parenting">parenting</option>
+                                    <option value="textiquette">textiquette</option>
                                 
-                                    <option value="grandcestor">grandcestor</option>
+                                    <option value="bitext">bitext</option>
                                 
-                                    <option value="grand-">grand-</option>
+                                    <option value="undertext">undertext</option>
                                 
-                                    <option value="ancestor">ancestor</option>
+                                    <option value="copytext">copytext</option>
                                 
-                                    <option value="stepgrandparent">stepgrandparent</option>
+                                    <option value="textversation">textversation</option>
                                 
-                                    <option value="step">step</option>
+                                    <option value="cotext">cotext</option>
                                 
-                                    <option value="grandchild">grandchild</option>
+                                    <option value="textpost">textpost</option>
                                 
-                                    <option value="child">child</option>
+                                    <option value="cyphertext">cyphertext</option>
                                 
-                                    <option value="great-grandchild">great-grandchild</option>
+                                    <option value="spintext">spintext</option>
                                 
-                                    <option value="stepgrandchild">stepgrandchild</option>
+                                    <option value="Eurotext">Eurotext</option>
                                 
-                                    <option value="grandchildless">grandchildless</option>
+                                    <option value="audiotext">audiotext</option>
                                 
-                                    <option value="less">less</option>
+                                    <option value="textident">textident</option>
                                 
-                                    <option value="grandchildlessness">grandchildlessness</option>
+                                    <option value="countertext">countertext</option>
                                 
-                                    <option value="ness">ness</option>
+                                    <option value="Textgate">Textgate</option>
                                 
-                                    <option value="grandchildhood">grandchildhood</option>
+                                    <option value="texteme">texteme</option>
                                 
-                                    <option value="grandcat">grandcat</option>
+                                    <option value="text door neighbour">text door neighbour</option>
                                 
-                                    <option value="cat">cat</option>
+                                    <option value="schizotext">schizotext</option>
                                 
-                                    <option value="grandson">grandson</option>
+                                    <option value="heterotext">heterotext</option>
                                 
-                                    <option value="son">son</option>
+                                    <option value="infotext">infotext</option>
                                 
-                                    <option value="granddaughter">granddaughter</option>
+                                    <option value="hypotext">hypotext</option>
                                 
-                                    <option value="daughter">daughter</option>
+                                    <option value="textology">textology</option>
                                 
-                                    <option value="great-great-granddaughter">great-great-granddaughter</option>
+                                    <option value="codetext">codetext</option>
                                 
-                                    <option value="grandee">grandee</option>
+                                    <option value="тиэкис">тиэкис</option>
                                 
-                                    <option value="grande">grande</option>
+                                    <option value="testa">testa</option>
                                 
-                                    <option value="grandis">grandis</option>
+                                    <option value="Text">Text</option>
                                 
-                                    <option value="gaan">gaan</option>
+                                    <option value="tekst">tekst</option>
                                 
-                                    <option value="go">go</option>
+                                    <option value="testo">testo</option>
                                 
-                                    <option value="Togo">Togo</option>
+                                    <option value="teksto">teksto</option>
                                 
-                                    <option value="to">to</option>
+                                    <option value="текст">текст</option>
                                 
-                                    <option value="Togolese">Togolese</option>
+                                    <option value="texto">texto</option>
                                 
-                                    <option value="Congolese">Congolese</option>
+                                    <option value="teksti">teksti</option>
                                 
-                                    <option value="congolais">congolais</option>
+                                    <option value="textura">textura</option>
                                 
-                                    <option value="Congo">Congo</option>
+                                    <option value="textorius">textorius</option>
                                 
-                                    <option value="ese">ese</option>
+                                    <option value="tekstur">tekstur</option>
                                 
-                                    <option value="Faroese">Faroese</option>
+                                    <option value="teksts">teksts</option>
                                 
-                                    <option value="Chicagoese">Chicagoese</option>
+                                    <option value="circumtextus">circumtextus</option>
                                 
-                                    <option value="togolais">togolais</option>
+                                    <option value="textūra">textūra</option>
                                 
-                                    <option value="-l-">-l-</option>
+                                    <option value="tekstura">tekstura</option>
+                                
+                                    <option value="текстура">текстура</option>
+                                
+                                    <option value="tekstuura">tekstuura</option>
+                                
+                                    <option value="tekstuuri">tekstuuri</option>
+                                
+                                    <option value="tèks">tèks</option>
+                                
+                                    <option value="paratexte">paratexte</option>
+                                
+                                    <option value="Coffin Texts">Coffin Texts</option>
+                                
+                                    <option value="e">e</option>
+                                
+                                    <option value="sub">sub</option>
+                                
+                                    <option value="סאבטקסט">סאבטקסט</option>
+                                
+                                    <option value="subtextless">subtextless</option>
+                                
+                                    <option value="context">context</option>
+                                
+                                    <option value="textile">textile</option>
+                                
+                                    <option value="technician">technician</option>
+                                
+                                    <option value="technique">technique</option>
+                                
+                                    <option value="subtle">subtle</option>
+                                
+                                    <option value="pretext">pretext</option>
+                                
+                                    <option value="architect">architect</option>
+                                
+                                    <option value="technical">technical</option>
+                                
+                                    <option value="tasse">tasse</option>
+                                
+                                    <option value="architecture">architecture</option>
+                                
+                                    <option value="technically">technically</option>
+                                
+                                    <option value="techno-">techno-</option>
+                                
+                                    <option value="tela">tela</option>
+                                
+                                    <option value="tessitura">tessitura</option>
+                                
+                                    <option value="subtility">subtility</option>
                                 
                             </select>
                         </div>
@@ -327,6 +446,15 @@
             <div id="mynetwork" class="card-body"></div>
         </div>
 
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
         
         
             <div id="config"></div>
@@ -495,8 +623,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "father", "label": "father", "shape": "dot", "title": "English\n0\nnan"}, {"color": "red", "font": {"color": "white"}, "id": "*peh\u2082-", "label": "*peh\u2082-", "shape": "dot", "title": "Proto-Indo-European"}, {"color": "red", "font": {"color": "white"}, "id": "fader", "label": "fader", "shape": "dot", "title": "Middle English"}, {"color": "red", "font": {"color": "white"}, "id": "f\u00e6der", "label": "f\u00e6der", "shape": "dot", "title": "Old English"}, {"color": "red", "font": {"color": "white"}, "id": "*fader", "label": "*fader", "shape": "dot", "title": "Proto-West Germanic"}, {"color": "red", "font": {"color": "white"}, "id": "*fad\u0113r", "label": "*fad\u0113r", "shape": "dot", "title": "Proto-Germanic"}, {"color": "red", "font": {"color": "white"}, "id": "*ph\u2082t\u1e17r", "label": "*ph\u2082t\u1e17r", "shape": "dot", "title": "Proto-Indo-European"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ayr", "label": "ayr", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "faeder", "label": "faeder", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "padre", "label": "padre", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "pater", "label": "pater", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "p\u00e8re", "label": "p\u00e8re", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandfather", "label": "grandfather", "shape": "dot", "title": "English\n0\nnan"}, {"color": "red", "font": {"color": "white"}, "id": "grandfadre", "label": "grandfadre", "shape": "dot", "title": "Middle English"}, {"color": "red", "font": {"color": "white"}, "id": "graundfadir", "label": "graundfadir", "shape": "dot", "title": "Middle English"}, {"color": "red", "font": {"color": "white"}, "id": "graunfadir", "label": "graunfadir", "shape": "dot", "title": "Middle English"}, {"color": "red", "font": {"color": "white"}, "id": "grauntfader", "label": "grauntfader", "shape": "dot", "title": "Middle English"}, {"color": "red", "font": {"color": "white"}, "id": "graunt", "label": "graunt", "shape": "dot", "title": "Middle English"}, {"color": "red", "font": {"color": "white"}, "id": "grandpere", "label": "grandpere", "shape": "dot", "title": "Middle French"}, {"color": "red", "font": {"color": "white"}, "id": "grant pere", "label": "grant pere", "shape": "dot", "title": "Middle French"}, {"color": "red", "font": {"color": "white"}, "id": "grand-p\u00e8re", "label": "grand-p\u00e8re", "shape": "dot", "title": "French"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grand", "label": "grand", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "eldfather", "label": "eldfather", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "elderfather", "label": "elderfather", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandfather clause", "label": "grandfather clause", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "clause", "label": "clause", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gaffer", "label": "gaffer", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gaff", "label": "gaff", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "-er", "label": "-er", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gaff cloth", "label": "gaff cloth", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gaff flap", "label": "gaff flap", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "godfather", "label": "godfather", "shape": "dot", "title": "English"}, {"color": "red", "font": {"color": "white"}, "id": "comp\u00e8re", "label": "comp\u00e8re", "shape": "dot", "title": "French"}, {"color": "red", "font": {"color": "white"}, "id": "Gevatter", "label": "Gevatter", "shape": "dot", "title": "German"}, {"color": "red", "font": {"color": "white"}, "id": "gaffe", "label": "gaffe", "shape": "dot", "title": "French"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gaffer tape", "label": "gaffer tape", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "tape", "label": "tape", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gafa", "label": "gafa", "shape": "dot", "title": "Romanian\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gaffer grip", "label": "gaffer grip", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grip", "label": "grip", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-grandfather", "label": "great-grandfather", "shape": "dot", "title": "English\n1\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-", "label": "great-", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-grand", "label": "great-grand", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great", "label": "great", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-granddaughter", "label": "great-granddaughter", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-grandmother", "label": "great-grandmother", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-grandson", "label": "great-grandson", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-grandfather-in-law", "label": "great-grandfather-in-law", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "in-law", "label": "in-law", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandparent", "label": "grandparent", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "parent", "label": "parent", "shape": "dot", "title": "English"}, {"color": "red", "font": {"color": "white"}, "id": "grand-parent", "label": "grand-parent", "shape": "dot", "title": "French"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-grandparent", "label": "great-grandparent", "shape": "dot", "title": "English\n1\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-grandparenthood", "label": "great-grandparenthood", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "hood", "label": "hood", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandparental", "label": "grandparental", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "al", "label": "al", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandparenthood", "label": "grandparenthood", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "co-grandparent", "label": "co-grandparent", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "co", "label": "co", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandparenting", "label": "grandparenting", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ing", "label": "ing", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "parenting", "label": "parenting", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandcestor", "label": "grandcestor", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grand-", "label": "grand-", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ancestor", "label": "ancestor", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "stepgrandparent", "label": "stepgrandparent", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "step", "label": "step", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandchild", "label": "grandchild", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "child", "label": "child", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-grandchild", "label": "great-grandchild", "shape": "dot", "title": "English\n1\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "stepgrandchild", "label": "stepgrandchild", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandchildless", "label": "grandchildless", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "less", "label": "less", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandchildlessness", "label": "grandchildlessness", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ness", "label": "ness", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandchildhood", "label": "grandchildhood", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandcat", "label": "grandcat", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "cat", "label": "cat", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandson", "label": "grandson", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "son", "label": "son", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "granddaughter", "label": "granddaughter", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "daughter", "label": "daughter", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "great-great-granddaughter", "label": "great-great-granddaughter", "shape": "dot", "title": "English\n1\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "grandee", "label": "grandee", "shape": "dot", "title": "English\n0\nnan"}, {"color": "red", "font": {"color": "white"}, "id": "grande", "label": "grande", "shape": "dot", "title": "Spanish"}, {"color": "red", "font": {"color": "white"}, "id": "grandis", "label": "grandis", "shape": "dot", "title": "Latin"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "gaan", "label": "gaan", "shape": "dot", "title": "Aukan\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "go", "label": "go", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Togo", "label": "Togo", "shape": "dot", "title": "English\n0\nnan"}, {"color": "red", "font": {"color": "white"}, "id": "to", "label": "to", "shape": "dot", "title": "Ewe"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Togolese", "label": "Togolese", "shape": "dot", "title": "English\n0\nnan"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Congolese", "label": "Congolese", "shape": "dot", "title": "English\n0\nnan"}, {"color": "red", "font": {"color": "white"}, "id": "congolais", "label": "congolais", "shape": "dot", "title": "French"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Congo", "label": "Congo", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "ese", "label": "ese", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Faroese", "label": "Faroese", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "Chicagoese", "label": "Chicagoese", "shape": "dot", "title": "English"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "togolais", "label": "togolais", "shape": "dot", "title": "French\n0\nnan"}, {"color": "red", "font": {"color": "white"}, "id": "-l-", "label": "-l-", "shape": "dot", "title": "French"}]);
-                  edges = new vis.DataSet([{"arrows": "to", "from": "*peh\u2082-", "title": "has_root", "to": "father"}, {"arrows": "to", "from": "fader", "title": "inherited_from", "to": "father"}, {"arrows": "to", "from": "f\u00e6der", "title": "inherited_from", "to": "father"}, {"arrows": "to", "from": "*fader", "title": "inherited_from", "to": "father"}, {"arrows": "to", "from": "*fad\u0113r", "title": "inherited_from", "to": "father"}, {"arrows": "to", "from": "*ph\u2082t\u1e17r", "title": "inherited_from", "to": "father"}, {"arrows": "to", "from": "ayr", "title": "doublet_with", "to": "father"}, {"arrows": "to", "from": "faeder", "title": "doublet_with", "to": "father"}, {"arrows": "to", "from": "padre", "title": "doublet_with", "to": "father"}, {"arrows": "to", "from": "pater", "title": "doublet_with", "to": "father"}, {"arrows": "to", "from": "p\u00e8re", "title": "doublet_with", "to": "father"}, {"arrows": "to", "from": "father", "title": "has_prefix_with_root", "to": "grandfather"}, {"arrows": "to", "from": "grandfadre", "title": "inherited_from", "to": "grandfather"}, {"arrows": "to", "from": "graundfadir", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "graunfadir", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "grauntfader", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "graunt", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "fader", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "grandpere", "title": "derived_from", "to": "grandfather"}, {"arrows": "to", "from": "grant pere", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "grand-p\u00e8re", "title": "cognate_of", "to": "grandfather"}, {"arrows": "to", "from": "grand", "title": "has_prefix", "to": "grandfather"}, {"arrows": "to", "from": "eldfather", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "elderfather", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "grandfather clause", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "clause", "title": "etymologically_related_to", "to": "grandfather"}, {"arrows": "to", "from": "grandfather", "title": "etymologically_related_to", "to": "gaffer"}, {"arrows": "to", "from": "gaff", "title": "has_affix", "to": "gaffer"}, {"arrows": "to", "from": "-er", "title": "has_affix", "to": "gaffer"}, {"arrows": "to", "from": "gaff cloth", "title": "etymologically_related_to", "to": "gaffer"}, {"arrows": "to", "from": "gaff flap", "title": "etymologically_related_to", "to": "gaffer"}, {"arrows": "to", "from": "godfather", "title": "etymologically_related_to", "to": "gaffer"}, {"arrows": "to", "from": "comp\u00e8re", "title": "cognate_of", "to": "gaffer"}, {"arrows": "to", "from": "Gevatter", "title": "cognate_of", "to": "gaffer"}, {"arrows": "to", "from": "gaffe", "title": "has_affix", "to": "gaffer"}, {"arrows": "to", "from": "gaffer", "title": "etymologically_related_to", "to": "gaffer tape"}, {"arrows": "to", "from": "tape", "title": "etymologically_related_to", "to": "gaffer tape"}, {"arrows": "to", "from": "gaffer", "title": "borrowed_from", "to": "gafa"}, {"arrows": "to", "from": "gaffer", "title": "etymologically_related_to", "to": "gaffer grip"}, {"arrows": "to", "from": "grip", "title": "etymologically_related_to", "to": "gaffer grip"}, {"arrows": "to", "from": "grandfather", "title": "has_affix", "to": "great-grandfather"}, {"arrows": "to", "from": "great-", "title": "has_affix", "to": "great-grandfather"}, {"arrows": "to", "from": "great-grandfather", "title": "etymologically_related_to", "to": "great-grand"}, {"arrows": "to", "from": "great", "title": "has_prefix", "to": "great-grand"}, {"arrows": "to", "from": "grand", "title": "has_prefix_with_root", "to": "great-grand"}, {"arrows": "to", "from": "great-granddaughter", "title": "etymologically_related_to", "to": "great-grand"}, {"arrows": "to", "from": "great-grandmother", "title": "etymologically_related_to", "to": "great-grand"}, {"arrows": "to", "from": "great-grandson", "title": "etymologically_related_to", "to": "great-grand"}, {"arrows": "to", "from": "great-grandfather", "title": "has_prefix_with_root", "to": "great-grandfather-in-law"}, {"arrows": "to", "from": "in-law", "title": "has_suffix", "to": "great-grandfather-in-law"}, {"arrows": "to", "from": "grand", "title": "has_prefix", "to": "grandparent"}, {"arrows": "to", "from": "parent", "title": "has_prefix_with_root", "to": "grandparent"}, {"arrows": "to", "from": "grand-parent", "title": "cognate_of", "to": "grandparent"}, {"arrows": "to", "from": "grandparent", "title": "has_affix", "to": "great-grandparent"}, {"arrows": "to", "from": "great-", "title": "has_affix", "to": "great-grandparent"}, {"arrows": "to", "from": "great-grandparent", "title": "has_prefix_with_root", "to": "great-grandparenthood"}, {"arrows": "to", "from": "hood", "title": "has_suffix", "to": "great-grandparenthood"}, {"arrows": "to", "from": "grandparent", "title": "has_prefix_with_root", "to": "grandparental"}, {"arrows": "to", "from": "al", "title": "has_suffix", "to": "grandparental"}, {"arrows": "to", "from": "grandparent", "title": "has_prefix_with_root", "to": "grandparenthood"}, {"arrows": "to", "from": "hood", "title": "has_suffix", "to": "grandparenthood"}, {"arrows": "to", "from": "grandparent", "title": "has_prefix_with_root", "to": "co-grandparent"}, {"arrows": "to", "from": "co", "title": "has_prefix", "to": "co-grandparent"}, {"arrows": "to", "from": "grandparent", "title": "has_prefix_with_root", "to": "grandparenting"}, {"arrows": "to", "from": "ing", "title": "has_suffix", "to": "grandparenting"}, {"arrows": "to", "from": "parenting", "title": "etymologically_related_to", "to": "grandparenting"}, {"arrows": "to", "from": "grandparent", "title": "etymologically_related_to", "to": "grandcestor"}, {"arrows": "to", "from": "grand-", "title": "blend_of", "to": "grandcestor"}, {"arrows": "to", "from": "ancestor", "title": "blend_of", "to": "grandcestor"}, {"arrows": "to", "from": "grandparent", "title": "has_prefix_with_root", "to": "stepgrandparent"}, {"arrows": "to", "from": "step", "title": "has_prefix", "to": "stepgrandparent"}, {"arrows": "to", "from": "grand", "title": "has_prefix", "to": "grandchild"}, {"arrows": "to", "from": "child", "title": "has_prefix_with_root", "to": "grandchild"}, {"arrows": "to", "from": "grandchild", "title": "has_affix", "to": "great-grandchild"}, {"arrows": "to", "from": "great-", "title": "has_affix", "to": "great-grandchild"}, {"arrows": "to", "from": "grandchild", "title": "has_prefix_with_root", "to": "stepgrandchild"}, {"arrows": "to", "from": "step", "title": "has_prefix", "to": "stepgrandchild"}, {"arrows": "to", "from": "grandchild", "title": "has_prefix_with_root", "to": "grandchildless"}, {"arrows": "to", "from": "less", "title": "has_suffix", "to": "grandchildless"}, {"arrows": "to", "from": "grandchildless", "title": "has_prefix_with_root", "to": "grandchildlessness"}, {"arrows": "to", "from": "ness", "title": "has_suffix", "to": "grandchildlessness"}, {"arrows": "to", "from": "grandchild", "title": "has_prefix_with_root", "to": "grandchildhood"}, {"arrows": "to", "from": "hood", "title": "has_suffix", "to": "grandchildhood"}, {"arrows": "to", "from": "grandchild", "title": "etymologically_related_to", "to": "grandcat"}, {"arrows": "to", "from": "grand-", "title": "has_affix", "to": "grandcat"}, {"arrows": "to", "from": "cat", "title": "has_affix", "to": "grandcat"}, {"arrows": "to", "from": "grand", "title": "has_prefix", "to": "grandson"}, {"arrows": "to", "from": "son", "title": "has_prefix_with_root", "to": "grandson"}, {"arrows": "to", "from": "grandson", "title": "has_affix", "to": "great-grandson"}, {"arrows": "to", "from": "great-", "title": "has_affix", "to": "great-grandson"}, {"arrows": "to", "from": "grand", "title": "has_prefix", "to": "granddaughter"}, {"arrows": "to", "from": "daughter", "title": "has_prefix_with_root", "to": "granddaughter"}, {"arrows": "to", "from": "granddaughter", "title": "has_affix", "to": "great-granddaughter"}, {"arrows": "to", "from": "great-", "title": "has_affix", "to": "great-granddaughter"}, {"arrows": "to", "from": "great-granddaughter", "title": "has_affix", "to": "great-great-granddaughter"}, {"arrows": "to", "from": "great-", "title": "has_affix", "to": "great-great-granddaughter"}, {"arrows": "to", "from": "grand", "title": "doublet_with", "to": "grandee"}, {"arrows": "to", "from": "grande", "title": "borrowed_from", "to": "grandee"}, {"arrows": "to", "from": "grandis", "title": "derived_from", "to": "grandee"}, {"arrows": "to", "from": "grand", "title": "derived_from", "to": "gaan"}, {"arrows": "to", "from": "gaan", "title": "cognate_of", "to": "go"}, {"arrows": "to", "from": "go", "title": "etymologically_related_to", "to": "Togo"}, {"arrows": "to", "from": "to", "title": "derived_from", "to": "Togo"}, {"arrows": "to", "from": "Togo", "title": "borrowed_from", "to": "Togo"}, {"arrows": "to", "from": "Togo", "title": "has_prefix_with_root", "to": "Togolese"}, {"arrows": "to", "from": "Togolese", "title": "etymologically_related_to", "to": "Congolese"}, {"arrows": "to", "from": "congolais", "title": "borrowed_from", "to": "Congolese"}, {"arrows": "to", "from": "Congo", "title": "has_prefix_with_root", "to": "Congolese"}, {"arrows": "to", "from": "ese", "title": "has_suffix", "to": "Congolese"}, {"arrows": "to", "from": "ese", "title": "has_suffix", "to": "Togolese"}, {"arrows": "to", "from": "congolais", "title": "etymologically_related_to", "to": "Togolese"}, {"arrows": "to", "from": "Faroese", "title": "etymologically_related_to", "to": "Togolese"}, {"arrows": "to", "from": "Chicagoese", "title": "etymologically_related_to", "to": "Togolese"}, {"arrows": "to", "from": "Togo", "title": "has_affix", "to": "togolais"}, {"arrows": "to", "from": "-l-", "title": "has_affix", "to": "togolais"}]);
+                  nodes = new vis.DataSet([{"color": "blue", "font": {"color": "white"}, "id": "e-text", "label": "e-text", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "text", "label": "text", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "subtext", "label": "subtext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "nan", "label": "nan", "shape": "dot", "title": "nan"}, {"color": "red", "font": {"color": "white"}, "id": "*tet\u1e31-", "label": "*tet\u1e31-", "shape": "dot", "title": "Proto-Indo-European"}, {"color": "red", "font": {"color": "white"}, "id": "texte", "label": "texte", "shape": "dot", "title": "Old French"}, {"color": "red", "font": {"color": "white"}, "id": "textus", "label": "textus", "shape": "dot", "title": "Medieval Latin"}, {"color": "blue", "font": {"color": "white"}, "id": "tex\u014d", "label": "tex\u014d", "shape": "dot", "title": "Latin"}, {"color": "blue", "font": {"color": "white"}, "id": "texture", "label": "texture", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "hypertext", "label": "hypertext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "Teletext", "label": "Teletext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "sext", "label": "sext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textbook", "label": "textbook", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "ciphertext", "label": "ciphertext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "texta", "label": "texta", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textbase", "label": "textbase", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "texting", "label": "texting", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "tejer", "label": "tejer", "shape": "dot", "title": "Spanish"}, {"color": "blue", "font": {"color": "white"}, "id": "textspeak", "label": "textspeak", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "cleartext", "label": "cleartext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textome", "label": "textome", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textphone", "label": "textphone", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textonym", "label": "textonym", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "prooftext", "label": "prooftext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textmode", "label": "textmode", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "cybertext", "label": "cybertext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "videotex", "label": "videotex", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textese", "label": "textese", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "texter", "label": "texter", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "urtext", "label": "urtext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textless", "label": "textless", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "surtext", "label": "surtext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textlike", "label": "textlike", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "\u30c6\u30ad\u30b9\u30c8", "label": "\u30c6\u30ad\u30b9\u30c8", "shape": "dot", "title": "Japanese"}, {"color": "blue", "font": {"color": "white"}, "id": "paratext", "label": "paratext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "teacsa", "label": "teacsa", "shape": "dot", "title": "Scottish Gaelic"}, {"color": "blue", "font": {"color": "white"}, "id": "detext", "label": "detext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "teletex", "label": "teletex", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "scrolltext", "label": "scrolltext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "tecer", "label": "tecer", "shape": "dot", "title": "Portuguese"}, {"color": "blue", "font": {"color": "white"}, "id": "textaholic", "label": "textaholic", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "intexticated", "label": "intexticated", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textbased", "label": "textbased", "shape": "dot", "title": "English"}, {"color": "red", "font": {"color": "white"}, "id": "teks", "label": "teks", "shape": "dot", "title": "Cebuano"}, {"color": "blue", "font": {"color": "white"}, "id": "textblock", "label": "textblock", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "texton", "label": "texton", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "nontext", "label": "nontext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "wikitext", "label": "wikitext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "worktext", "label": "worktext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "intertext", "label": "intertext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "intext", "label": "intext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textman", "label": "textman", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textboard", "label": "textboard", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "martext", "label": "martext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textworthy", "label": "textworthy", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textshop", "label": "textshop", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textism", "label": "textism", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "peritext", "label": "peritext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "metatext", "label": "metatext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "t\u00e9acs", "label": "t\u00e9acs", "shape": "dot", "title": "Irish"}, {"color": "blue", "font": {"color": "white"}, "id": "songtext", "label": "songtext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "playtext", "label": "playtext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textiquette", "label": "textiquette", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "bitext", "label": "bitext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "undertext", "label": "undertext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "copytext", "label": "copytext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textversation", "label": "textversation", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "cotext", "label": "cotext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textpost", "label": "textpost", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "cyphertext", "label": "cyphertext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "spintext", "label": "spintext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "Eurotext", "label": "Eurotext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "audiotext", "label": "audiotext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textident", "label": "textident", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "countertext", "label": "countertext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "Textgate", "label": "Textgate", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "texteme", "label": "texteme", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "text door neighbour", "label": "text door neighbour", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "schizotext", "label": "schizotext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "heterotext", "label": "heterotext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "infotext", "label": "infotext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "hypotext", "label": "hypotext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textology", "label": "textology", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "codetext", "label": "codetext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "\u0442\u0438\u044d\u043a\u0438\u0441", "label": "\u0442\u0438\u044d\u043a\u0438\u0441", "shape": "dot", "title": "Yakut"}, {"color": "blue", "font": {"color": "white"}, "id": "testa", "label": "testa", "shape": "dot", "title": "Galician"}, {"color": "blue", "font": {"color": "white"}, "id": "Text", "label": "Text", "shape": "dot", "title": "German"}, {"color": "blue", "font": {"color": "white"}, "id": "tekst", "label": "tekst", "shape": "dot", "title": "Danish"}, {"color": "blue", "font": {"color": "white"}, "id": "testo", "label": "testo", "shape": "dot", "title": "Italian"}, {"color": "blue", "font": {"color": "white"}, "id": "teksto", "label": "teksto", "shape": "dot", "title": "Esperanto"}, {"color": "blue", "font": {"color": "white"}, "id": "\u0442\u0435\u043a\u0441\u0442", "label": "\u0442\u0435\u043a\u0441\u0442", "shape": "dot", "title": "Macedonian"}, {"color": "blue", "font": {"color": "white"}, "id": "texto", "label": "texto", "shape": "dot", "title": "Ido"}, {"color": "blue", "font": {"color": "white"}, "id": "teksti", "label": "teksti", "shape": "dot", "title": "Finnish"}, {"color": "red", "font": {"color": "white"}, "id": "textura", "label": "textura", "shape": "dot", "title": "Latin"}, {"color": "blue", "font": {"color": "white"}, "id": "textorius", "label": "textorius", "shape": "dot", "title": "Latin"}, {"color": "blue", "font": {"color": "white"}, "id": "tekstur", "label": "tekstur", "shape": "dot", "title": "Faroese"}, {"color": "blue", "font": {"color": "white"}, "id": "teksts", "label": "teksts", "shape": "dot", "title": "Latvian"}, {"color": "blue", "font": {"color": "white"}, "id": "circumtextus", "label": "circumtextus", "shape": "dot", "title": "Latin"}, {"color": "red", "font": {"color": "white"}, "id": "text\u016bra", "label": "text\u016bra", "shape": "dot", "title": "Latin"}, {"color": "blue", "font": {"color": "white"}, "id": "tekstura", "label": "tekstura", "shape": "dot", "title": "Serbo-Croatian"}, {"color": "blue", "font": {"color": "white"}, "id": "\u0442\u0435\u043a\u0441\u0442\u0443\u0440\u0430", "label": "\u0442\u0435\u043a\u0441\u0442\u0443\u0440\u0430", "shape": "dot", "title": "Serbo-Croatian"}, {"color": "blue", "font": {"color": "white"}, "id": "tekstuura", "label": "tekstuura", "shape": "dot", "title": "Finnish"}, {"color": "blue", "font": {"color": "white"}, "id": "tekstuuri", "label": "tekstuuri", "shape": "dot", "title": "Finnish"}, {"color": "blue", "font": {"color": "white"}, "id": "t\u00e8ks", "label": "t\u00e8ks", "shape": "dot", "title": "Haitian Creole"}, {"color": "blue", "font": {"color": "white"}, "id": "paratexte", "label": "paratexte", "shape": "dot", "title": "French"}, {"color": "blue", "font": {"color": "white"}, "id": "Coffin Texts", "label": "Coffin Texts", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "e", "label": "e", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "sub", "label": "sub", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "\u05e1\u05d0\u05d1\u05d8\u05e7\u05e1\u05d8", "label": "\u05e1\u05d0\u05d1\u05d8\u05e7\u05e1\u05d8", "shape": "dot", "title": "Hebrew"}, {"color": "blue", "font": {"color": "white"}, "id": "subtextless", "label": "subtextless", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "context", "label": "context", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "textile", "label": "textile", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "technician", "label": "technician", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "technique", "label": "technique", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "subtle", "label": "subtle", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "pretext", "label": "pretext", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "architect", "label": "architect", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "technical", "label": "technical", "shape": "dot", "title": "English"}, {"color": "red", "font": {"color": "white"}, "id": "tasse", "label": "tasse", "shape": "dot", "title": "French"}, {"color": "blue", "font": {"color": "white"}, "id": "architecture", "label": "architecture", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "technically", "label": "technically", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "techno-", "label": "techno-", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "tela", "label": "tela", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "tessitura", "label": "tessitura", "shape": "dot", "title": "English"}, {"color": "blue", "font": {"color": "white"}, "id": "subtility", "label": "subtility", "shape": "dot", "title": "English"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "e-text"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "subtext"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "text"}, {"arrows": "to", "from": "text", "title": "inherited_from", "to": "text"}, {"arrows": "to", "from": "texte", "title": "derived_from", "to": "text"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "text"}, {"from": "text", "title": "etymologically_related_to", "to": "tex\u014d"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "hypertext"}, {"from": "texture", "title": "etymologically_related_to", "to": "text"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "Teletext"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "sext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textbook"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "ciphertext"}, {"from": "texta", "title": "etymologically_related_to", "to": "text"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "textbase"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "texting"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textspeak"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "cleartext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textome"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textphone"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "textonym"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "prooftext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textmode"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "cybertext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "videotex"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textese"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "texter"}, {"arrows": "to", "from": "text", "title": "has_affix", "to": "urtext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textless"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "surtext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textlike"}, {"arrows": "to", "from": "text", "title": "borrowed_from", "to": "\u30c6\u30ad\u30b9\u30c8"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "paratext"}, {"arrows": "to", "from": "text", "title": "derived_from", "to": "teacsa"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "detext"}, {"arrows": "to", "from": "text", "title": "has_affix", "to": "teletex"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "scrolltext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textaholic"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "intexticated"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textbased"}, {"from": "teks", "title": "etymologically_related_to", "to": "text"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textblock"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "texton"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "nontext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "wikitext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "worktext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "intertext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "intext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textman"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textboard"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "martext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textworthy"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textshop"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textism"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "peritext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "metatext"}, {"arrows": "to", "from": "text", "title": "derived_from", "to": "t\u00e9acs"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "songtext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "playtext"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "textiquette"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "bitext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "undertext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "copytext"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "textversation"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "cotext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "textpost"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "cyphertext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "spintext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "Eurotext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "audiotext"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "textident"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "countertext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "Textgate"}, {"arrows": "to", "from": "text", "title": "has_affix", "to": "texteme"}, {"arrows": "to", "from": "text", "title": "blend_of", "to": "text door neighbour"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "schizotext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "heterotext"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "infotext"}, {"arrows": "to", "from": "text", "title": "has_affix", "to": "hypotext"}, {"arrows": "to", "from": "text", "title": "has_prefix_with_root", "to": "textology"}, {"arrows": "to", "from": "text", "title": "compound_of", "to": "codetext"}, {"arrows": "to", "from": "textus", "title": "inherited_from", "to": "testa"}, {"from": "texture", "title": "etymologically_related_to", "to": "textus"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "Text"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "tekst"}, {"arrows": "to", "from": "textus", "title": "borrowed_from", "to": "testo"}, {"arrows": "to", "from": "textus", "title": "borrowed_from", "to": "teksto"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "\u0442\u0435\u043a\u0441\u0442"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "texto"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "teksti"}, {"arrows": "to", "from": "textus", "title": "borrowed_from", "to": "textus"}, {"from": "textus", "title": "etymologically_related_to", "to": "tex\u014d"}, {"from": "textura", "title": "etymologically_related_to", "to": "textus"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "teacsa"}, {"arrows": "to", "from": "textus", "title": "has_prefix_with_root", "to": "textorius"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "teks"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "t\u00e9acs"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "tekstur"}, {"arrows": "to", "from": "textus", "title": "derived_from", "to": "teksts"}, {"arrows": "to", "from": "textus", "title": "has_affix", "to": "circumtextus"}, {"arrows": "to", "from": "text\u016bra", "title": "borrowed_from", "to": "textura"}, {"arrows": "to", "from": "texture", "title": "borrowed_from", "to": "textura"}, {"arrows": "to", "from": "textura", "title": "derived_from", "to": "tekstura"}, {"arrows": "to", "from": "textura", "title": "derived_from", "to": "\u0442\u0435\u043a\u0441\u0442\u0443\u0440\u0430"}, {"arrows": "to", "from": "textura", "title": "derived_from", "to": "tekstur"}, {"arrows": "to", "from": "text\u016bra", "title": "derived_from", "to": "texture"}, {"arrows": "to", "from": "text\u016bra", "title": "derived_from", "to": "tekstuuri"}, {"arrows": "to", "from": "texte", "title": "borrowed_from", "to": "tekst"}, {"from": "texte", "title": "etymologically_related_to", "to": "tex\u014d"}, {"arrows": "to", "from": "texte", "title": "derived_from", "to": "t\u00e8ks"}, {"arrows": "to", "from": "texte", "title": "derived_from", "to": "teks"}, {"arrows": "to", "from": "texte", "title": "has_affix", "to": "paratexte"}, {"arrows": "to", "from": "texte", "title": "calque_of", "to": "Coffin Texts"}, {"arrows": "to", "from": "e", "title": "has_prefix", "to": "e-text"}, {"arrows": "to", "from": "sub", "title": "has_prefix", "to": "subtext"}, {"arrows": "to", "from": "subtext", "title": "borrowed_from", "to": "\u05e1\u05d0\u05d1\u05d8\u05e7\u05e1\u05d8"}, {"arrows": "to", "from": "subtext", "title": "has_prefix_with_root", "to": "subtextless"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "context"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "textile"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "technician"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "technique"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "subtle"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "pretext"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "architect"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "technical"}, {"from": "tasse", "title": "etymologically_related_to", "to": "*tet\u1e31-"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "architecture"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "technically"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "texture"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "techno-"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "tela"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "tessitura"}, {"arrows": "to", "from": "*tet\u1e31-", "title": "has_root", "to": "subtility"}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -557,6 +685,23 @@
                   
 
 
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
                   
 
                   return network;
