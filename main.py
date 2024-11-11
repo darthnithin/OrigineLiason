@@ -59,8 +59,10 @@ def plot_word_graph(df, word):
     plt.title(f"Graph of '{word}' and Related Terms")
     plt.show()
 
-@app.route('/<word>')
-def plot_word_graph_pyvis(word):
+
+@app.route('/words/<path:words>')
+def plot_word_graph_pyvis(words):
+    #print(words)
     net = Network(
         notebook=False,
         height="750px",
@@ -72,7 +74,14 @@ def plot_word_graph_pyvis(word):
     )
     searched = set()
     #add_word(df, word, net, searched)
-    add_word_bfs(word, net, searched)
+    word_list = words.split('/')
+    last_word_or_number = word_list[-1]
+    if last_word_or_number.isdigit():
+        nodes = int(word_list.pop())
+    else:
+        nodes = 20
+    for (node_mult, word) in enumerate(word_list):
+        add_word_bfs(word, net, searched, (node_mult+1)*nodes + net.num_nodes(), word_list, nodes_per=nodes)
 
     net.show_buttons()
     html_content = net.generate_html()
@@ -86,18 +95,18 @@ def plot_word_graph_pyvis(word):
 
     return render_template_string(html_content)
 
-def add_word_bfs(word, net, searched_words):
+def add_word_bfs(word, net, searched_words, node_count, wordlist, nodes_per):
     queue = deque([word])
-    
-
-    while queue and net.num_nodes() < 125:
+    path = "/".join(wordlist)
+    while queue and (net.num_nodes() < node_count):
         current_word = queue.popleft()
         if current_word in searched_words:
             continue
-        print(current_word)
+        #print(current_word)
         sub_df = df[(df["term"] == current_word) | (df["related_term"] == current_word)]
         for _, row in sub_df.iterrows():
-
+            if net.num_nodes() > node_count:
+                break
             term, related_term = str(row["term"]), str(row["related_term"])
             relationship = str(row["reltype"])
 
@@ -111,17 +120,20 @@ def add_word_bfs(word, net, searched_words):
             related_term_color_condition = (row["related_lang"] != "English" and edge_start == related_term)
 
             if term not in searched_words:
+                #print(f'{path}/{term}/{nodes_per}')
                 net.add_node(
                     term,
                     label=term,
-                    title=str(row["lang"]),
+                    #title=str(row["lang"]),
+                    title=f'<a href="{path}/{term}/{nodes_per}">{term} ({row["lang"]})</a>',
                     color="red" if term_color_condition else "blue",
                 )
             if related_term not in searched_words:
                 net.add_node(
                     related_term,
                     label=related_term,
-                    title=str(row["related_lang"]),
+                    #title=str(row["related_lang"]),
+                    title=f'<a href="{path}/{related_term}/{nodes_per}">{related_term} ({row["related_lang"]})</a>',
                     color="red" if related_term_color_condition else "blue",
                 )
             if relationship == "etymologically_related_to":
@@ -131,7 +143,7 @@ def add_word_bfs(word, net, searched_words):
                 
             
             if (term not in queue) and (term not in searched_words):
-                print(term)
+                #print(term)
                 if str(row['lang']) in IMPORTANT_LANGUAGE_LIST and term == edge_start:
                 #if str(row['related_lang']) in IMPORTANT_LANGUAGE_LIST:
                     queue.appendleft(term)
@@ -140,7 +152,7 @@ def add_word_bfs(word, net, searched_words):
 
             if (related_term not in queue) and (related_term not in searched_words):
                 #if str(row['related_lang']) in IMPORTANT_LANGUAGE_LIST and related_term == edge_start:
-                print(related_term)
+                #print(related_term)
 
                 if str(row['related_lang']) in IMPORTANT_LANGUAGE_LIST and related_term == edge_start:
                     #print(searched_words)
