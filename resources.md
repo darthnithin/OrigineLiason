@@ -9,3 +9,5 @@ python -m black ./ to factor
 python -m pycodestyle ./ to check
 
 https://plotly.com/python/v3/3d-network-graph/
+
+todo: caching
